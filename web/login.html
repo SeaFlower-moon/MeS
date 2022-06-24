@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>医药销售管理系统</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'>
+</head>
+<body>
+
+
+
+ <!--注册登录 -->
+<div class="container">
+    <div class="form-box">
+        <form id="fmLogin" method=""post action="index.html">
+        <!-- 注册 -->
+        <div class="register-box hidden">
+            <h1>register</h1>
+            <input type="text" name="name" placeholder="用户名">
+            <input type="email" placeholder="邮箱">
+            <input type="password" name="pwd" placeholder="密码">
+            <input type="password" placeholder="确认密码">
+            <button>注册</button>
+        </div>
+        <!-- 登录 -->
+        <div class="login-box">
+            <h1>login</h1>
+            <input type="text"  name="name" placeholder="用户名">
+            <input type="password" name="pwd" placeholder="密码">
+            <button>登录</button>
+        </div>
+        </form>
+    </div>
+    <div class="con-box left">
+        <span>医药销售系统</span>
+        <p>这里有很多<span>药物</span></p>
+        <img src="../image/me.png" alt="">
+        <p>已有账号</p>
+        <button id="login">去登录</button>
+    </div>
+    <div class="con-box right">
+        <span>医药销售系统</span>
+        <p>这里有很多<span>药物</span></p>
+        <img src="../image/me.png" alt="">
+        <p>没有账号</p>
+        <button id="register">去注册</button>
+    </div>
+</div>
+<script>
+    // 要操作到的元素
+    let login=document.getElementById('login');
+    let register=document.getElementById('register');
+    let form_box=document.getElementsByClassName('form-box')[0];
+    let register_box=document.getElementsByClassName('register-box')[0];
+    let login_box=document.getElementsByClassName('login-box')[0];
+    // 去注册按钮点击事件
+    register.addEventListener('click',()=>{
+        form_box.style.transform='translateX(80%)';
+    login_box.classList.add('hidden');
+    register_box.classList.remove('hidden');
+    })
+    // 去登录按钮点击事件
+    login.addEventListener('click',()=>{
+        form_box.style.transform='translateX(0%)';
+    register_box.classList.add('hidden');
+    login_box.classList.remove('hidden');
+    })
+</script>
+    <!--背景 -->
+<canvas></canvas>
+
+<div class="support">
+    <a href="https://twitter.com/DevLoop01" target="_blank"><i class="fab fa-twitter-square"></i></a>
+    <a href="https://codepen.io/dev_loop/" target="_blank"><i class="fab fa-codepen"></i></a>
+</div>
+
+
+
+<script  src="js/index.js"></script>
+    
+    
+
+</body>
+</html>
